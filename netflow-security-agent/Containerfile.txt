@@ -1,0 +1,17 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONPATH=/app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY train_model.py .
+COPY src/ ./src/
+
+# 建置映像檔時直接訓練並打包模型權重 (ids_model.pkl)
+RUN python train_model.py
+
+CMD ["python", "src/agent.py"]

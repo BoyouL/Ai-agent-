@@ -1,0 +1,5 @@
+Src_IP,Dst_IP,Protocol,Flow_Duration,Total_Fwd_Packets,Total_Backward_Packets
+192.168.1.55,45.33.32.156,TCP,85,340,1
+192.168.1.55,45.33.32.156,TCP,110,415,0
+192.168.1.12,8.8.8.8,UDP,3500,15,14
+192.168.1.88,140.112.8.116,TCP,4200,22,20
